@@ -1,0 +1,51 @@
+/* 채움드라이브 웹 겉모양. (주)채움AI 2026-11-18. theme.json 의 색 역할 위에 글꼴·단추·둥글기만 덧붙인다. */
+@font-face { font-family: "Pretendard"; font-weight: 400; font-display: swap; src: url("fonts/Pretendard-Regular.subset.woff2") format("woff2"); }
+@font-face { font-family: "Pretendard"; font-weight: 500; font-display: swap; src: url("fonts/Pretendard-Medium.subset.woff2") format("woff2"); }
+@font-face { font-family: "Pretendard"; font-weight: 600; font-display: swap; src: url("fonts/Pretendard-SemiBold.subset.woff2") format("woff2"); }
+@font-face { font-family: "Pretendard"; font-weight: 700; font-display: swap; src: url("fonts/Pretendard-Bold.subset.woff2") format("woff2"); }
+
+:root { --chaeum-radius: 10px; --chaeum-radius-small: 7px; }
+
+/* 「신규」 단추: 그라데이션 대신 한 색 */
+.oc-app-floating-action-button,
+#new-file-menu-btn {
+  background-image: none !important;
+  background-color: var(--oc-role-primary) !important;
+  color: var(--oc-role-on-primary) !important;
+  border-radius: var(--chaeum-radius-small) !important;
+  box-shadow: none !important;
+  font-weight: 600;
+}
+.oc-app-floating-action-button:hover,
+#new-file-menu-btn:hover { filter: brightness(0.93); }
+
+/* 왼쪽 메뉴: 고른 줄은 흰 알약 + 왼쪽 파란 막대(앱과 같게) */
+#web-nav-sidebar .oc-sidebar-nav-item a,
+#web-nav-sidebar .oc-sidebar-nav-item button { border-radius: var(--chaeum-radius) !important; font-weight: 600; }
+#web-nav-sidebar .oc-sidebar-nav-item .active,
+#web-nav-sidebar .oc-sidebar-nav-item a.router-link-active {
+  background: var(--oc-role-surface) !important;
+  box-shadow: inset 3px 0 0 var(--oc-role-primary), 0 0 0 1px var(--oc-role-outline-variant) !important;
+  color: var(--oc-role-on-surface) !important;
+}
+
+/* 본문 판과 타일 */
+#files-view, #web-content-main { border-radius: 12px; }
+.oc-tile-card, .oc-tile-card-preview { border-radius: var(--chaeum-radius) !important; }
+.oc-tile-card { border: 1px solid var(--oc-role-outline-variant) !important; }
+
+/* 검색 칸 */
+#files-global-search .oc-search-input { border-radius: 9px !important; }
+
+/* 표 머리 */
+.oc-table thead th { color: var(--oc-role-on-surface-variant); font-weight: 600; }
+
+/* OpenCloud 이름·그림이 보이는 자리를 걷는다(11-21 점검). */
+/* 왼쪽 메뉴 아래 「OpenCloud 7.5.0 rolling」 판 줄. 같은 자리의 법적 고지 링크·업데이트 알림(링크·단추가 든 것)은 남긴다. */
+#web-nav-sidebar div.pb-4.px-4.text-xs > span:not(:has(*)) { display: none !important; }
+/* 로그인 뒤 안내·로그아웃·링크 확인 같은 빈 쪽 오른쪽 아래의 큰 OpenCloud 문양 */
+img[alt="OpenCloud emblem"] { display: none !important; }
+
+/* 수정분 소스 링크(ko-apply.js 가 넣음, AGPL-3.0). 작게, 흐린 색으로. */
+#web-nav-sidebar a.chaeum-source { color: var(--oc-role-on-surface-variant, #6b7280) !important; text-decoration: none !important; font-size: 11px; }
+#web-nav-sidebar a.chaeum-source:hover { text-decoration: underline; }

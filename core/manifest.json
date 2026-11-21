@@ -1,0 +1,16 @@
+{
+  "name": "채움드라이브",
+  "short_name": "채움드라이브",
+  "icons": [
+    {
+      "src": "img/opencloud-icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/",
+  "display": "fullscreen",
+  "orientation": "portrait",
+  "background_color": "#FFFFFF",
+  "theme_color": "#2563eb"
+}

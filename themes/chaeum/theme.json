@@ -1,0 +1,205 @@
+{
+  "clients": {
+    "android": {},
+    "desktop": {},
+    "ios": {},
+    "web": {
+      "defaults": {
+        "favicon": "themes/chaeum/assets/favicon.png",
+        "logo": "themes/chaeum/assets/logo.png",
+        "logoMobile": "themes/chaeum/assets/icon.png"
+      },
+      "themes": [
+        {
+          "designTokens": {
+            "roles": {
+              "background": "#f4f6f9",
+              "error": "#c2410c",
+              "errorContainer": "#fdece6",
+              "inverseOnSurface": "#f4f6f9",
+              "inversePrimary": "#93b4f8",
+              "inverseSurface": "#1f2937",
+              "onBackground": "#1f2937",
+              "onError": "#ffffff",
+              "onErrorContainer": "#7c2d12",
+              "onPrimary": "#ffffff",
+              "onPrimaryContainer": "#1e4fc4",
+              "onPrimaryFixed": "#1e4fc4",
+              "onSecondary": "#ffffff",
+              "onSecondaryContainer": "#1e4fc4",
+              "onSecondaryFixed": "#1e4fc4",
+              "onSurface": "#1f2937",
+              "onSurfaceVariant": "#5b6778",
+              "onTertiary": "#ffffff",
+              "onTertiaryContainer": "#4a3808",
+              "onTertiaryFixed": "#4a3808",
+              "outline": "#8a95a5",
+              "outlineVariant": "#e3e8ef",
+              "primary": "#2563eb",
+              "primaryContainer": "#e8effd",
+              "primaryFixed": "#e8effd",
+              "scrim": "#000000",
+              "secondary": "#2563eb",
+              "secondaryContainer": "#e8effd",
+              "secondaryFixed": "#e8effd",
+              "shadow": "#000000",
+              "surface": "#ffffff",
+              "surfaceBright": "#ffffff",
+              "surfaceContainer": "#f4f6f9",
+              "surfaceContainerHigh": "#eef1f5",
+              "surfaceContainerHighest": "#e9edf2",
+              "surfaceContainerLow": "#f7f9fb",
+              "surfaceContainerLowest": "#ffffff",
+              "surfaceDim": "#dfe4ea",
+              "surfaceVariant": "#eef1f5",
+              "tertiary": "#8a6a1c",
+              "tertiaryContainer": "#f6efd9",
+              "tertiaryFixed": "#f6efd9",
+              "chrome": "#eef1f5",
+              "onChrome": "#1f2937"
+            },
+            "fontFamily": "Pretendard, \"Malgun Gothic\", \"Apple SD Gothic Neo\", system-ui, sans-serif"
+          },
+          "isDark": false,
+          "label": "Light Theme"
+        },
+        {
+          "designTokens": {
+            "roles": {
+              "background": "#14181e",
+              "error": "#ffb4ab",
+              "errorContainer": "#93000a",
+              "inverseOnSurface": "#2e3132",
+              "inversePrimary": "#2563eb",
+              "inverseSurface": "#e1e3e4",
+              "onBackground": "#e5e9ef",
+              "onError": "#690005",
+              "onErrorContainer": "#ffb4ab",
+              "onPrimary": "#0b2a6b",
+              "onPrimaryContainer": "#dbe6ff",
+              "onPrimaryFixed": "#001f28",
+              "onSecondary": "#0b2a6b",
+              "onSecondaryContainer": "#dbe6ff",
+              "onSecondaryFixed": "#071e26",
+              "onSurface": "#e5e9ef",
+              "onSurfaceVariant": "#aeb7c4",
+              "onTertiary": "#2c2e4d",
+              "onTertiaryContainer": "#e0e0ff",
+              "onTertiaryFixed": "#171937",
+              "outline": "#7c8796",
+              "outlineVariant": "#333b46",
+              "primary": "#8fb0ff",
+              "primaryContainer": "#1e3a8a",
+              "primaryFixed": "#b7eaff",
+              "scrim": "#000000",
+              "secondary": "#8fb0ff",
+              "secondaryContainer": "#1e3a8a",
+              "secondaryFixed": "#cfe6f1",
+              "shadow": "#000000",
+              "surface": "#1a1f26",
+              "surfaceBright": "#373a3b",
+              "surfaceContainer": "#1c2128",
+              "surfaceContainerHigh": "#232931",
+              "surfaceContainerHighest": "#2b323b",
+              "surfaceContainerLow": "#181d23",
+              "surfaceContainerLowest": "#11151a",
+              "surfaceDim": "#111415",
+              "surfaceVariant": "#262c35",
+              "tertiary": "#c3c3eb",
+              "tertiaryContainer": "#424465",
+              "tertiaryFixed": "#e0e0ff",
+              "chrome": "#14181e",
+              "onChrome": "#e5e9ef"
+            },
+            "fontFamily": "Pretendard, \"Malgun Gothic\", \"Apple SD Gothic Neo\", system-ui, sans-serif"
+          },
+          "isDark": true,
+          "label": "Dark Theme",
+          "logo": "themes/chaeum/assets/logo-dark.png",
+          "logoMobile": "themes/chaeum/assets/icon.png"
+        }
+      ]
+    }
+  },
+  "common": {
+    "logo": "themes/chaeum/assets/logo.png",
+    "name": "채움드라이브",
+    "shareRoles": {
+      "1c996275-f1c9-4e71-abdf-a42f6495e960": {
+        "iconName": "upload",
+        "label": "UnifiedRoleUploader"
+      },
+      "2d00ce52-1fc2-4dbc-8b95-a73b73395f5a": {
+        "iconName": "pencil",
+        "label": "UnifiedRoleFileEditor"
+      },
+      "312c0871-5ef7-4b3a-85b6-0e4074c64049": {
+        "iconName": "user-star",
+        "label": "UnifiedRoleManager"
+      },
+      "3284f2d5-0070-4ad8-ac40-c247f7c1fb27": {
+        "iconName": "pencil",
+        "label": "UnifiedRoleSpaceEditorWithoutVersions"
+      },
+      "3d00ce52-1fc2-4dbc-8b95-a73b73395f5a": {
+        "iconName": "pencil",
+        "label": "UnifiedRoleFileEditorWithVersions"
+      },
+      "3de465fc-6e17-4839-8b8a-a77cc497878b": {
+        "iconName": "eye",
+        "label": "UnifiedRoleSpaceViewerWithVersions"
+      },
+      "58c63c02-1d89-4572-916a-870abc5a1b7d": {
+        "iconName": "pencil",
+        "label": "UnifiedRoleSpaceEditor"
+      },
+      "63e64e19-8d43-42ec-a738-2b6af2610efa": {
+        "iconName": "stop-circle",
+        "label": "UnifiedRoleFullDenial"
+      },
+      "a8d5fe5e-96e3-418d-825b-534dbdf22b99": {
+        "iconName": "eye",
+        "label": "UnifiedRoleSpaceViewer"
+      },
+      "aa97fe03-7980-45ac-9e50-b325749fd7e6": {
+        "iconName": "shield",
+        "label": "UnifiedRoleSecureView"
+      },
+      "b1e2218d-eef8-4d4c-b82d-0f1a1b48f3b5": {
+        "iconName": "eye",
+        "name": "UnifiedRoleViewer"
+      },
+      "b8c6e1c9-5d2a-4f0e-9c3b-1a2b3c4d5e6f": {
+        "iconName": "pencil",
+        "label": "UnifiedRoleEditorWithVersions"
+      },
+      "c1235aea-d106-42db-8458-7d5610fb0a67": {
+        "iconName": "pencil",
+        "label": "UnifiedRoleFileEditorListGrants"
+      },
+      "d1e2218d-eef8-4d4c-b82d-0f1a1b48f3b5": {
+        "iconName": "eye",
+        "name": "UnifiedRoleViewerWithVersions"
+      },
+      "d5041006-ebb3-4b4a-b6a4-7c180ecfb17d": {
+        "iconName": "eye",
+        "name": "UnifiedRoleViewerListGrants"
+      },
+      "e8ea8b21-abd4-45d2-b893-8d1546378e9e": {
+        "iconName": "pencil",
+        "label": "UnifiedRoleEditorListGrants"
+      },
+      "fb6c3e19-e378-47e5-b277-9732f9de6e21": {
+        "iconName": "pencil",
+        "label": "UnifiedRoleEditor"
+      }
+    },
+    "slogan": "채움드라이브",
+    "urls": {
+      "accessDeniedHelp": "",
+      "accessibility": "",
+      "imprint": "",
+      "privacy": ""
+    }
+  }
+}
