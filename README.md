@@ -16,6 +16,7 @@ The Chaeum Drive web interface runs the unmodified OpenCloud Web shipped with Op
 - 테마 폴더를 `WEB_ASSET_THEMES_PATH` 아래 `chaeum/` 로 두고 `WEB_UI_THEME_PATH=/themes/chaeum/theme.json` 을 준다.
 - `WEB_UI_CONFIG_FILE` 의 config.json 에 `styles: [{"href": "themes/chaeum/chaeum.css"}]`, `customTranslations: [{"url": "<주소>/themes/chaeum/ko.json"}]`, `scripts: [{"src": "/themes/chaeum/ko-apply.js"}]` 를 더한다.
 - 확장은 `WEB_ASSET_APPS_PATH` 아래 `chaeum-slides/` 로 둔다.
+- 채움슬라이드 편집기를 파일함과 다른 주소에 두면 `apps/chaeum-slides/manifest.json` 의 `config` 에 `"editorUrl": "https://<편집기 주소>/slides/edit.html"` 을 넣는다. 비워 두면 파일함과 같은 주소의 `/slides/edit.html` 을 연다.
 
 ## 이름과 로고
 
