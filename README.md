@@ -7,7 +7,7 @@ The Chaeum Drive web interface runs the unmodified OpenCloud Web shipped with Op
 | 폴더 | 내용 |
 |---|---|
 | `themes/chaeum/` | 테마(theme.json, chaeum.css), 한국어 번역(ko.json, ko-apply.js), 로고, Pretendard 글꼴(SIL OFL 1.1, fonts/OFL.txt) |
-| `apps/chaeum-slides/` | 파일 메뉴의 「채움슬라이드로 열기」 확장(external app, module federation remote entry) |
+| `apps/chaeum-slides/` | 파일 메뉴의 「채움슬라이드 (HTML)로 열기」 확장(external app, module federation remote entry) |
 | `core/` | 웹 서버(nginx)가 바꿔 끼우는 파일: 탭 그림(favicon), 홈 화면 추가 아이콘·이름(manifest), 문서 제목. 방법은 core/README.md |
 | `tools/` | ko.json 을 만드는 대본(build.py)과 번역 원본(ko/*.tsv, overrides.json) |
 

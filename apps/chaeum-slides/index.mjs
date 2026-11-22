@@ -5,7 +5,7 @@
 // 웹은 바깥 앱을 module federation 원격 입구(.mjs)로만 싣는다. 빌드 도구 없이 쓰려고 입구(init·get)를 손으로 썼다.
 // 웹이 넘기는 공유 모듈은 쓰지 않는다(vue 판이 바뀌어도 이 파일은 그대로 돈다).
 
-const LABEL = "채움슬라이드로 열기";
+const LABEL = "채움슬라이드 (HTML)로 열기";
 
 function isDeck(resource) {
   if (!resource || resource.isFolder || resource.type === "folder") return false;
@@ -56,7 +56,7 @@ function makeApp() {
       };
       const ext = (id, point) => ({ id, type: "action", extensionPointIds: [point], action });
       return {
-        appInfo: { name: "채움슬라이드", id: "chaeum-slides", icon: "presentation", isFileEditor: false },
+        appInfo: { name: "채움슬라이드 (HTML)", id: "chaeum-slides", icon: "presentation", isFileEditor: false },
         extensions: [
           ext("com.chaeumai.slides.open.context", "global.files.context-actions"),
           ext("com.chaeumai.slides.open.sidebar", "app.files.sidebar.actions"),
