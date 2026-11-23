@@ -30,7 +30,9 @@
   "%{ itemCount } space selected": [
    "스페이스 %{ itemCount }개 선택됨"
   ],
-  "%{ items } uploaded": "%{ items }개 업로드함",
+  "%{ items } uploaded": "%{ items } 업로드함",
+  "Text Editor": "텍스트 편집기",
+  "Navigated to %{ pageTitle }": "%{ pageTitle } 화면",
   "%{ itemsCount } item in total": "모두 %{ itemsCount }개",
   "%{ itemsCount } item with %{ itemSize } in total": "모두 %{ itemsCount }개, %{ itemSize }",
   "%{ itemsCount } items in total": "모두 %{ itemsCount }개",

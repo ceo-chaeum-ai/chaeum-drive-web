@@ -49,3 +49,6 @@ img[alt="OpenCloud emblem"] { display: none !important; }
 /* 수정분 소스 링크(ko-apply.js 가 넣음, AGPL-3.0). 작게, 흐린 색으로. */
 #web-nav-sidebar a.chaeum-source { color: var(--oc-role-on-surface-variant, #6b7280) !important; text-decoration: none !important; font-size: 11px; }
 #web-nav-sidebar a.chaeum-source:hover { text-decoration: underline; }
+
+/* 휴대폰: 떠 있는 「+」 단추가 목록 맨 아래 ⋮ 를 가리지 않게 그 높이만큼 비워 둔다(11-23). */
+body:has([id^="mobile-app-floating-action-button"]) .files-view-wrapper { padding-bottom: 88px; }

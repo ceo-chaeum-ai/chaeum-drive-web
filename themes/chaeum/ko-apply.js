@@ -39,6 +39,16 @@
   }
   setInterval(sourceLink, 1000);
 
+  // 탭 제목: 앱 이름이 번역 전 글로 박혀 들어온다(「… - Text Editor - 채움드라이브」). 우리 번역에 있는 앱 이름으로 바꾼다.
+  function title() {
+    if (!ours) return;
+    var parts = document.title.split(' - ');
+    if (parts.length < 3) return;
+    var i = parts.length - 2, name = ours[parts[i]];
+    if (typeof name === 'string' && name !== parts[i]) { parts[i] = name; document.title = parts.join(' - '); }
+  }
+  setInterval(title, 500);
+
   fetch(url, { credentials: 'same-origin' })
     .then(function (r) { return r.ok ? r.json() : null; })
     .then(function (j) {
