@@ -39,15 +39,37 @@
   }
   setInterval(sourceLink, 1000);
 
-  // 탭 제목: 앱 이름이 번역 전 글로 박혀 들어온다(「… - Text Editor - 채움드라이브」). 우리 번역에 있는 앱 이름으로 바꾼다.
+  // 앱 이름(Text Editor, PDF Viewer, Epub Reader 등)이 번역 전 글로 탭 제목과 화면 읽기 알림에 박혀 들어온다.
+  // 우리 번역에 있으면 그것으로, 없으면 앱이 가진 한국어 번역으로 바꾼다. 딱 맞는 글 조각만 바꾼다(파일 이름은 그대로).
+  function ko(s) {
+    var v = ours && ours[s];
+    if (typeof v !== 'string') {
+      var g = gettext();
+      v = g && g.translations && g.translations.ko && g.translations.ko[s];
+    }
+    return typeof v === 'string' && v !== s ? v : null;
+  }
+  // 탭 제목: 「… - Text Editor - 채움드라이브」 의 가운데 앱 이름
   function title() {
-    if (!ours) return;
     var parts = document.title.split(' - ');
     if (parts.length < 3) return;
-    var i = parts.length - 2, name = ours[parts[i]];
-    if (typeof name === 'string' && name !== parts[i]) { parts[i] = name; document.title = parts.join(' - '); }
+    var i = parts.length - 2, name = ko(parts[i]);
+    if (name) { parts[i] = name; document.title = parts.join(' - '); }
   }
-  setInterval(title, 500);
+  // 화면 읽기 알림: 「회의록.pdf - PDF Viewer 화면」 의 끝 앱 이름
+  var SCREEN = ' 화면';
+  function announcer() {
+    var els = document.querySelectorAll('.oc-hidden-announcer');
+    for (var k = 0; k < els.length; k++) {
+      var t = els[k].textContent || '';
+      var tail = t.slice(-SCREEN.length) === SCREEN ? SCREEN : '';
+      var parts = t.slice(0, t.length - tail.length).split(' - ');
+      if (parts.length < 2) continue;
+      var name = ko(parts[parts.length - 1]);
+      if (name) { parts[parts.length - 1] = name; els[k].textContent = parts.join(' - ') + tail; }
+    }
+  }
+  setInterval(function () { title(); announcer(); }, 500);
 
   fetch(url, { credentials: 'same-origin' })
     .then(function (r) { return r.ok ? r.json() : null; })
